@@ -1,0 +1,18 @@
+[package]
+name = "threadpool"
+version = "0.1.0"
+authors = ["Simon Tharby <jinjamail@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "threadpool"
+path = "src/lib.rs"
+
+[[bin]]
+name = "main"
+path = "src/bin/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num_cpus = "1.0"
