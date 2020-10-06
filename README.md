@@ -6,7 +6,7 @@ Learning to use Arc, Mutex, Atomic variables, and developing understanding of ow
 
 ## compile to release version
 
-Assuming you have Rust installed, compile to a _release build_ to evaluate the true performance differences related to sharing the calculation accross different numbers of threads:
+Assuming you have Rust installed, compile to a _release build_ to reveal actual performance differences from sharing the calculation between different numbers of threads:
 * clone repo.  
 * `$ cd threadpool`  
 * `$ cargo build --release`  
