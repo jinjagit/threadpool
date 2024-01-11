@@ -1,6 +1,6 @@
 // My, very naive, implementation of using a thread-pool to share work in parallel.
 // Uses the thread-pool in lib.rs (from https://www.youtube.com/watch?v=2mwwYbBRJSo)
-// Finds sum(sine(1), sine(2), sine(3) ... sine(n)), where n = 50000000.
+// Finds sum(sine(1), sine(2), sine(3) ... sine(n)), where n = 50_000_000.
 
 extern crate num_cpus;
 
@@ -42,7 +42,7 @@ fn main() {
         let foo = move || {
             let task_index = thread_counter_clone.fetch_add(1, Ordering::SeqCst);
             let default_task_size = 50000000 / num_threads;
-            let start = default_task_size * task_index;
+            let start = default_task_size * task_index; // This method can be adjusted to set various vars for each thread. E.g. name of face (might be only thing needed!)
             let mut result: f64 = 0.0;
 
             if task_index == num_threads - 1 {
