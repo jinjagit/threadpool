@@ -16,3 +16,4 @@ path = "src/bin/main.rs"
 
 [dependencies]
 num_cpus = "1.0"
+rayon = "1.10.0"
